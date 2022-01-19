@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.base_ab {
+  color: $gray;
+  i {
+    background-image: url("../../Assets/ability_bg.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 50px;
+    color: $white;
+    padding: 40px;
+  }
+  i.small {
+    padding: 45px;
+    font-size: 55px;
+  }
+  h4 {
+    font-family: $font_bold;
+  }
+}

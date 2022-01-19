@@ -1,0 +1,50 @@
+.contact {
+  background: $dark_gray;
+
+  // the have a question text
+  p {
+    color: $light_blue;
+    font-weight: 600;
+    span{
+      font-size: 13px;
+    }
+  }
+
+  // the form
+  form {
+    input,
+    textarea {
+      background: $blue_gray;
+      color: $white;
+      font-size: 12pt;
+      padding: 10px 15px;
+      transition: $transition;
+      &:hover {
+        filter: brightness(102%);
+      }
+      &:focus {
+        background: $blue_gray;
+        color: $white;
+      }
+      &::placeholder {
+        font-weight: 600;
+        opacity: 0.9;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    button {
+      color: $white;
+      border: 1.9px solid $dark_white;
+      border-radius: 2px;
+      padding: 1.8rem;
+      transition: $transition;
+      &:hover {
+        border-color: $light_blue;
+        background: $light_blue;
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.who_is {
+  color: $gray;
+  h2 {
+    font-size: 18pt;
+    font-family: $font_bold;
+  }
+  p {
+    line-height: 19pt;
+    font-family: $font_light;
+    a {
+      text-decoration: none;
+      color: $light_blue;
+      font-weight: bold;
+    }
+    span {
+      color: $light_blue;
+      font-weight: bold;
+    }
+  }
+}

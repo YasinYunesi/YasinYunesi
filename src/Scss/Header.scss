@@ -1,0 +1,14 @@
+@import "../Scss/variables.scss";
+
+.costum_header {
+  font-size: 30pt;
+  h1 {
+    font-family: $font_bold;
+    opacity: 1;
+  }
+  .header_underline {
+    opacity: 1;
+    height: 4px;
+    width: 6rem;
+  }
+}

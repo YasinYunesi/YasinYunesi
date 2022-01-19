@@ -1,0 +1,18 @@
+@import "./Scss/Banner.scss";
+@import "./Scss/Navbar.scss";
+@import "./Scss/Header.scss";
+@import "./Scss/Loading.scss";
+@import "./Scss/About/BaseAbilities.scss";
+@import "./Scss/About/MainAbilities.scss";
+@import "./Scss/About/WhoIsThisGuy.scss";
+@import "./Scss/Portfolio/Portfolio.scss";
+@import "./Scss/Contact/Contact.scss";
+@import "./Scss/Footer/Footer.scss";
+@import "./Scss/Education/Education.scss";
+
+* {
+  font-family: $font_raleway;
+}
+body {
+  overflow-x: hidden;
+}

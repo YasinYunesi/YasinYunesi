@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.portfolio {
+  background: $dark_white;
+
+  .projects_container {
+    .project {
+      // the content of each project
+      .project_content {
+        h2 {
+          a {
+            text-decoration: none;
+            color: $pink;
+            &:hover {
+              text-decoration: underline;
+            }
+            i {
+              font-size: 15px;
+            }
+          }
+        }
+        p {
+          font-size: 20px;
+          line-height: 33px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

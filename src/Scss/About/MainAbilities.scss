@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.ma_item {
+  background: $light_gray;
+  div {
+    background: $blue;
+    h6 {
+      font-family: $font_bold;
+      color: $white;
+      background: $light_blue;
+      @media screen and (max-width: 400px) {
+        width: 80px;
+      }
+      width: 110px;
+    }
+  }
+  span {
+    color: $dark;
+  }
+}

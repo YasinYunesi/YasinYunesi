@@ -1,0 +1,63 @@
+.costum_footer {
+  background: $dark_blue;
+
+  // back to top btn
+  .back_to_top {
+    left: 50%;
+    margin-left: -26px;
+    width: 52px;
+    font-size: 20pt;
+    top: -25px;
+    color: $white;
+    background: $pink;
+    border-radius: 0;
+    transition: $short_transition;
+    &:hover {
+      color: $white;
+      border-radius: 5px;
+    }
+  }
+
+  // social account btns
+  .footer_social {
+    a {
+      background: #262f38;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      overflow: hidden;
+      transition: $transition;
+      &:hover {
+        background: $light_blue;
+        transform: scale(1.05, 1.05);
+        i {
+          color: $white;
+        }
+      }
+
+      i {
+        color: $white;
+        font-size: 17pt;
+        transition: $transition;
+      }
+    }
+  }
+
+  // the owner
+  p {
+    color: #8f9aa7;
+    font-size: 11pt;
+    opacity: 0.6;
+
+    span {
+      color: $pink;
+      font-size: 12pt;
+      i {
+        font-size: 9pt;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.education {
+  .education_title {
+    color: $light_blue;
+    font-weight: bold;
+  }
+  p {
+    font-size: 20px;
+    line-height: 35px;
+    text-align: justify;
+    span {
+      color: $blue;
+    }
+  }
+}

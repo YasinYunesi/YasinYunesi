@@ -1,0 +1,228 @@
+@import "../Scss/variables.scss";
+
+// animations start
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotate_n {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+// animations end
+
+// n is number of stars generated
+@function generateStars($n) {
+  $value: "#{0} #{random(2000)}px #{random(2000)}px #FFF";
+
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
+
+  @return unquote($value);
+}
+$stars-small: generateStars(700);
+$stars-medium: generateStars(200);
+$stars-big: generateStars(100);
+
+// mixins start
+@mixin translate50 {
+  -webkit-transform: translate(-50, -50%);
+  -ms-transform: translate(-50, -50%);
+  -o-transform: translate(-50, -50%);
+  transform: translate(-50, -50%);
+}
+
+@mixin roundedCorners {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin rotateBase {
+  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+  -ms-transform: rotate3d(-1, 1, 0, 0deg);
+  -o-transform: rotate3d(-1, 1, 0, 0deg);
+  transform: rotate3d(-1, 1, 0, 0deg);
+}
+
+@mixin rotateRight {
+  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
+  -ms-transform: rotate3d(-1, 1, 0, 30deg);
+  -o-transform: rotate3d(-1, 1, 0, 30deg);
+  transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+@mixin rotateLeft {
+  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
+  -ms-transform: rotate3d(-1, 1, 0, -30deg);
+  -o-transform: rotate3d(-1, 1, 0, -30deg);
+  transform: rotate3d(-1, 1, 0, -30deg);
+}
+// mixins end
+
+// animations start
+@keyframes animateStars {
+  0% {
+    @include rotateBase;
+  }
+  25% {
+    @include rotateRight;
+  }
+  50% {
+    @include rotateBase;
+  }
+  75% {
+    @include rotateLeft;
+  }
+  100% {
+    @include rotateBase;
+  }
+}
+// animations end
+
+.banner {
+  height: 100vh;
+
+  // stars start
+  .stars_container {
+    height: 100%;
+    width: 100%;
+    background: #252934;
+    overflow: hidden;
+    @include translate50;
+
+    .stars {
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $stars-small;
+      animation: animateStars 28.5s ease-in-out infinite;
+      @include roundedCorners;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $stars-small;
+        @include roundedCorners;
+      }
+    }
+    .stars2 {
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $stars-medium;
+      animation: animateStars 30s ease-in-out infinite;
+      @include roundedCorners;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $stars-medium;
+        @include roundedCorners;
+      }
+    }
+    .stars3 {
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $stars-big;
+      animation: animateStars 31.5s ease-in-out infinite;
+      @include roundedCorners;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $stars-big;
+        @include roundedCorners;
+      }
+    }
+  }
+  // stars end
+
+  // main content start
+  .banner_main {
+    color: white;
+
+    // the text
+    .banner_text {
+      h1 {
+        @media screen and (min-width: 600px) {
+          font-size: 32pt;
+        }
+        line-height: 22pt;
+
+        span {
+          color: $pink;
+          font-weight: bolder;
+        }
+      }
+      br {
+        display: none;
+        @media screen and (min-width: 600px) {
+          display: block;
+        }
+      }
+    }
+
+    // the btn
+    .banner_btn {
+      a {
+        font-size: 16pt;
+        color: $white;
+        text-decoration: none;
+        background: transparent;
+        padding: 0.8rem 1.3rem;
+        border: 2px solid $white;
+        transition: $transition;
+        &:hover {
+          background: $light_blue;
+          border-color: $light_blue;
+        }
+
+        i {
+          font-size: 18px;
+        }
+        i.active {
+          animation: rotate 0.3s ease forwards;
+        }
+        i.active_n {
+          animation: rotate_n 0.3s ease forwards;
+        }
+      }
+    }
+  }
+  // main content end
+}
