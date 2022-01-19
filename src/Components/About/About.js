@@ -12,7 +12,7 @@ const About = () => {
       {/* base abilities */}
       <BaseAbilities />
 
-      <div className='d-lg-flex pt-5 mx-auto col-11'>
+      <div className='d-lg-flex py-5 mx-auto col-11'>
         {/* who is this guy */}
         <WhoIsThisGuy />
 

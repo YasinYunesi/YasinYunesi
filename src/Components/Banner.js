@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Typical from "react-typical";
 
 const Banner = () => {
   // LOGIC /////////////////////////
@@ -20,10 +21,13 @@ const Banner = () => {
         {/* the text */}
         <div className='banner_text'>
           <h1>
-            Hello, I'm <span>Yasin Yunesi</span>.
+            Hello, I'm <span className='name'>Yasin Yunesi</span>.
           </h1>
           <br />
-          <h1>I'm a React js web developer.</h1>
+          <h1>
+            I'm a React js <Typical steps={["website", 4000, "web app", 3000]} loop={Infinity} wrapper='span' />
+            developer.
+          </h1>
         </div>
 
         {/* the btn */}

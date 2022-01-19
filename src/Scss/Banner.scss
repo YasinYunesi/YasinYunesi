@@ -184,7 +184,7 @@ $stars-big: generateStars(100);
         }
         line-height: 22pt;
 
-        span {
+        .name {
           color: $pink;
           font-weight: bolder;
         }

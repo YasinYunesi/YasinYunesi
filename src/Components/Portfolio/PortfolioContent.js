@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PortfolioContent = ({ title, text, techs, home }) => {
+const PortfolioContent = ({ title, text, techs, home, techPic }) => {
   // LOGIC //////////////////////////////////
   const [websiteLink, setWebsiteLink] = useState("");
 
@@ -39,28 +39,16 @@ const PortfolioContent = ({ title, text, techs, home }) => {
               <img
                 className='col-1 p-sm-2 p-lg-1 p-xxl-2'
                 src={
-                  (tech === "React JS"
-                    ? "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-                    : undefined) ||
-                  (tech === "Sass"
-                    ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYrOfGH4wfwWwj8XZTaYFsjiuD5H0XixFhSeHzA-AQ_jDngu8Pg_teiXLLiB0PqdFtNXI&usqp=CAU"
-                    : undefined) ||
-                  (tech === "Firebase DB"
-                    ? "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png"
-                    : undefined) ||
-                  (tech === "Bootstrap"
-                    ? "https://www.kindpng.com/picc/m/27-278320_bootstrap-logo-logo-png-bootstrap-logo-transparent-png.png"
-                    : undefined) ||
-                  (tech === "HTML"
-                    ? "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
-                    : undefined) ||
-                  (tech === "CSS"
-                    ? "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                    : undefined) ||
-                  (tech === "Redux" ? "https://www.pngrepo.com/download/303557/redux-logo.png" : undefined) ||
-                  (tech === "Tailwind"
-                    ? "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
-                    : undefined)
+                  (tech === "ReactJS" ? techPic[0] : undefined) ||
+                  (tech === "Redux" ? techPic[1] : undefined) ||
+                  (tech === "Tailwind" ? techPic[2] : undefined) ||
+                  (tech === "Bootstrap" ? techPic[3] : undefined) ||
+                  (tech === "Sass" ? techPic[4] : undefined) ||
+                  (tech === "Firebase DB" ? techPic[5] : undefined) ||
+                  (tech === "Firebase auth" ? techPic[5] : undefined) ||
+                  (tech === "HTML" ? techPic[6] : undefined) ||
+                  (tech === "CSS" ? techPic[7] : undefined) ||
+                  (tech === "Local-JSON" ? techPic[8] : undefined)
                 }
                 alt='logo'
               />

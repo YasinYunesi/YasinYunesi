@@ -3,7 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 const MAItem = ({ text, percentage }) => {
   return (
     <ScrollAnimation animateIn='bounceInRight' duration={2} animateOnce={true}>
-      <div className='ma_item d-flex align-items-center position-relative mx-auto col-12 col-md-10 col-lg-12 mb-1 mb-lg-0'>
+      <div className='ma_item mt-2 d-flex align-items-center position-relative mx-auto col-12 col-md-10 col-lg-12 mb-1 mb-lg-0'>
         {/* percentage background ("dark blue" part) */}
         <div style={{ width: percentage }}>
           {/* ability name */}

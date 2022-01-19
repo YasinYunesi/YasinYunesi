@@ -1,19 +1,25 @@
+import { useEffect, useState } from "react";
 import MAItem from "./MAitem";
 
 const MainAbilities = () => {
+  const [skills, setSkills] = useState([]);
+
+  // fetching data from data.json file
+  async function getData() {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    setSkills(data.skills);
+  }
+  useEffect(() => {
+    getData();
+  }, []);
+
+  // JSX ////////////////////////////
   return (
-    <div className='main_ab col d-flex flex-column justify-content-between'>
-      <MAItem text='React js' percentage='80%' />
-      <MAItem text='HTML' percentage='90%' />
-      <MAItem text='CSS' percentage='90%' />
-      <MAItem text='Javascript' percentage='80%' />
-      <MAItem text='Sass' percentage='80%' />
-      <MAItem text='Redux' percentage='60%' />
-      <MAItem text='Bootstrap' percentage='90%' />
-      <MAItem text='Tailwind' percentage='70%' />
-      <MAItem text='Git/Github' percentage='50%' />
-      <MAItem text='Other' percentage='55%' />
-      <MAItem text='English' percentage='95%' />
+    <div className='main_ab col m-auto d-flex flex-column justify-content-between'>
+      {skills.map(({ title, percentage }) => {
+        return <MAItem text={title} percentage={percentage + "%"} />;
+      })}
     </div>
   );
 };

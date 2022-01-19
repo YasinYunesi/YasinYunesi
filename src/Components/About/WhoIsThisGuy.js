@@ -3,7 +3,7 @@ import OwnerImg from "../../Assets/Owner.png";
 
 const WhoIsThisGuy = () => {
   return (
-    <div className='who_is text-center mx-auto col-12 col-lg-6 mb-5 mb-lg-0'>
+    <div className='who_is text-center m-auto col-12 col-lg-6 mb-5 mb-lg-0'>
       <ScrollAnimation animateIn='bounceInLeft' duration={2} animateOnce={true}>
         <img className='mx-auto col-11 col-sm-9 col-lg-7' src={OwnerImg} alt='Owner' />
         <h2 className='py-2'>Who's this guy?</h2>
