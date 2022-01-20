@@ -18,7 +18,7 @@
         "dataAssets/techPics/json.png"
       ],
       "screenshotLarge": [
-        "dataAssets/projects/Banners/movie_ave.png",
+        "dataAssets/projects/movie_ave/movie_ave.png",
         "dataAssets/projects/movie_ave/S1.png",
         "dataAssets/projects/movie_ave/S2.png",
         "dataAssets/projects/movie_ave/S3.png",
@@ -53,7 +53,7 @@
         "dataAssets/techPics/json.png"
       ],
       "screenshotLarge": [
-        "dataAssets/projects/Banners/amazon.png",
+        "dataAssets/projects/amazon/amazon.png",
         "dataAssets/projects/amazon/S1.png",
         "dataAssets/projects/amazon/S2.png",
         "dataAssets/projects/amazon/S3.png"
@@ -83,7 +83,7 @@
         "dataAssets/techPics/json.png"
       ],
       "screenshotLarge": [
-        "dataAssets/projects/Banners/classy_cafe.png",
+        "dataAssets/projects/classy_cafe/classy_cafe.png",
         "dataAssets/projects/classy_cafe/S1.png",
         "dataAssets/projects/classy_cafe/S2.png",
         "dataAssets/projects/classy_cafe/S3.png",
@@ -116,7 +116,7 @@
         "dataAssets/techPics/json.png"
       ],
       "screenshotLarge": [
-        "dataAssets/projects/Banners/portfolio.png",
+        "dataAssets/projects/portfolio/portfolio.png",
         "dataAssets/projects/portfolio/S1.png",
         "dataAssets/projects/portfolio/S2.png",
         "dataAssets/projects/portfolio/S3.png",
