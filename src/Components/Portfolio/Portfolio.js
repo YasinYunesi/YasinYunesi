@@ -1,7 +1,7 @@
-import Header from "../Header";
-import PortfolioContent from "./PortfolioContent";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useEffect, useState } from "react";
+import Header from "../Header";
+import ScrollAnimation from "react-animate-on-scroll";
+import TabPane from "./TabPane";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([]);
@@ -21,18 +21,152 @@ const Portfolio = () => {
     <div className='portfolio py-5' id='portfolio'>
       <Header text='projects' />
 
-      {/* projects */}
-      <div className='projects_container mx-auto col-12 col-lg-11 col-xl-8 px-2 px-xl-4 py-5'>
-        {projects.map(({ id, title, about, banner, tech, techPic, screenshotLarge, screenshotSmall, links }) => {
-          return (
-            <ScrollAnimation animateIn='fadeIn' animateOnce={true} key={id}>
-              <div className='project d-flex flex-column flex-md-row align-items-center justify-content-between py-5'>
-                <img className='col-12 col-md-6 px-4 px-md-0 mb-3 mb-md-0 shadow rounded' src={banner} alt='Movie ave' />
-                <PortfolioContent title={title} text={about} techs={tech} techPic={techPic} />
+      {/* PROJECTS */}
+      <div className='projects_container container px-5'>
+        {/* Tabs */}
+        <ScrollAnimation animateIn='fadeIn' animateOnce={true}>
+          <div
+            className='projects_tabs list-group col-8 mx-auto mb-4 mt-5 text-uppercase text-center d-flex flex-row justify-content-around'
+            role='tablist'
+            id='list-tab'
+          >
+            <a
+              className='list-group-item list-group-item-action active'
+              id='projects-all'
+              data-bs-toggle='list'
+              href='#all'
+              role='tab'
+              aria-controls='all'
+            >
+              all
+            </a>
+            <a
+              className='list-group-item list-group-item-action'
+              id='projects-react'
+              data-bs-toggle='list'
+              href='#react'
+              role='tab'
+              aria-controls='react'
+            >
+              react js
+            </a>
+            <a
+              className='list-group-item list-group-item-action'
+              id='projects-tailwind'
+              data-bs-toggle='list'
+              href='#tailwind'
+              role='tab'
+              aria-controls='tailwind'
+            >
+              tailwind
+            </a>
+            <a
+              className='list-group-item list-group-item-action'
+              id='projects-bootstrap'
+              data-bs-toggle='list'
+              href='#bootstrap'
+              role='tab'
+              aria-controls='bootstrap'
+            >
+              bootstrap
+            </a>
+          </div>
+        </ScrollAnimation>
+        {/* projects banners */}
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
+          <div className='tab-content' id='pills-tabContent'>
+            {/* All */}
+            <div className='tab-pane fade show active' id='all' role='tabpanel' aria-labelledby='projects-all'>
+              <div className='projects'>
+                {projects.map(({ id, banner, tech, title, subtitle, techPic, images, about, link, github }) => {
+                  return (
+                    <TabPane
+                      key={id}
+                      banner={banner}
+                      tech={tech}
+                      title={title}
+                      subtitle={subtitle}
+                      techPic={techPic}
+                      images={images}
+                      about={about}
+                      link={link}
+                      github={github}
+                    />
+                  );
+                })}
               </div>
-            </ScrollAnimation>
-          );
-        })}
+            </div>
+            {/* React */}
+            <div className='tab-pane fade' id='react' role='tabpanel' aria-labelledby='projects-react'>
+              <div className='projects'>
+                {projects.map(({ id, banner, tech, title, subtitle, techPic, images, about, link, github }) => {
+                  return (
+                    tech.includes("ReactJS") && (
+                      <TabPane
+                        key={id}
+                        banner={banner}
+                        tech={tech}
+                        title={title}
+                        subtitle={subtitle}
+                        techPic={techPic}
+                        images={images}
+                        about={about}
+                        link={link}
+                        github={github}
+                      />
+                    )
+                  );
+                })}
+              </div>
+            </div>
+            {/* Tailwind */}
+            <div className='tab-pane fade' id='tailwind' role='tabpanel' aria-labelledby='projects-ttailwind'>
+              <div className='projects'>
+                {projects.map(({ id, banner, tech, title, subtitle, techPic, images, about, link, github }) => {
+                  return (
+                    tech.includes("Tailwind") && (
+                      <TabPane
+                        key={id}
+                        banner={banner}
+                        tech={tech}
+                        title={title}
+                        subtitle={subtitle}
+                        techPic={techPic}
+                        images={images}
+                        about={about}
+                        link={link}
+                        github={github}
+                      />
+                    )
+                  );
+                })}
+              </div>
+            </div>
+            {/* Bootstrap */}
+            <div className='tab-pane fade' id='bootstrap' role='tabpanel' aria-labelledby='projects-bootstrap'>
+              <div className='projects'>
+                {projects.map(({ id, banner, tech, title, subtitle, techPic, images, about, link, github }) => {
+                  return (
+                    tech.includes("Bootstrap") && (
+                      <TabPane
+                        key={id}
+                        banner={banner}
+                        tech={tech}
+                        title={title}
+                        subtitle={subtitle}
+                        techPic={techPic}
+                        images={images}
+                        about={about}
+                        link={link}
+                        github={github}
+                      />
+                    )
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </ScrollAnimation>
       </div>
     </div>
   );

@@ -1,0 +1,85 @@
+.custom_modal {
+  width: 700px;
+  outline: none;
+  border-radius: 2px;
+
+  // CAROUSEL
+  .carousel {
+    .carousel_btn {
+      border: 0;
+      color: $white;
+      background: rgba(0, 0, 0, 0.28);
+      transition: $short_transition;
+      &:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  // CONTENT
+  .modal_content {
+    background: $white;
+    // title
+    .modal_title {
+      h3 {
+        font-weight: bold;
+      }
+      span {
+        color: #9c9c9c;
+      }
+      a {
+        i {
+          color: $gray;
+          transition: $short_transition;
+          &:hover {
+            color: $dark;
+            animation: $shake;
+          }
+        }
+      }
+    }
+
+    // description
+    p {
+      font-size: 16px;
+    }
+
+    // techs
+    .techs {
+      display: grid;
+      grid-template-columns: repeat(15, minmax(0, 1fr));
+      div {
+        background: #e0e7f0;
+        border-radius: 50px;
+      }
+    }
+
+    // btns
+    .modal_btns {
+      .site_btn {
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        background: $pink;
+        color: white;
+        font-size: 14px;
+        border: 1px solid transparent;
+        transition: $short_transition;
+        &:hover {
+          background: transparent;
+          color: $pink;
+          border-color: $pink;
+        }
+      }
+      .close_btn {
+        border: none;
+        outline: none;
+        color: #9c9c9c;
+        transition: $short_transition;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

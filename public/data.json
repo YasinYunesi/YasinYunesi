@@ -3,9 +3,10 @@
     {
       "id": "1",
       "title": "Movie Ave",
+      "subtitle": "Movie detail web app",
       "about": "Movie ave is web application that works with TMDB fantastic API. In this app you can find any movie or animation you could think of and see their full detail. You can add them to your favorites list or add them to 'watch later' list to watch them when you had the time.",
       "banner": "dataAssets/projects/Banners/movie_ave.png",
-      "tech": ["ReactJS", "Sass", "Bootstrap", "Firebase DB", "Firebase auth"],
+      "tech": ["ReactJS", "Bootstrap", "Sass", "Firebase DB", "Firebase auth"],
       "techPic": [
         "dataAssets/techPics/react.png",
         "dataAssets/techPics/redux.png",
@@ -17,27 +18,23 @@
         "dataAssets/techPics/css.png",
         "dataAssets/techPics/json.png"
       ],
-      "screenshotLarge": [
-        "dataAssets/projects/movie_ave/movie_ave.png",
+      "images": [
         "dataAssets/projects/movie_ave/S1.png",
         "dataAssets/projects/movie_ave/S2.png",
         "dataAssets/projects/movie_ave/S3.png",
         "dataAssets/projects/movie_ave/S4.png",
         "dataAssets/projects/movie_ave/S5.png",
-        "dataAssets/projects/movie_ave/S6.png"
+        "dataAssets/projects/movie_ave/S6.png",
+        "dataAssets/projects/movie_ave/S7.png",
+        "dataAssets/projects/movie_ave/S8.png"
       ],
-      "screenshotSmall": [
-        "dataAssets/projects/movie_ave/sm/S1.png",
-        "dataAssets/projects/movie_ave/sm/S2.png",
-        "dataAssets/projects/movie_ave/sm/S3.png",
-        "dataAssets/projects/movie_ave/sm/S4.png",
-        "dataAssets/projects/movie_ave/sm/S5.png"
-      ],
-      "links": ["https://movie-ave.vercel.app/", "https://github.com/YasinYunesi/MovieAve"]
+      "link": "https://movie-ave.vercel.app",
+      "github": "https://github.com/YasinYunesi/MovieAve"
     },
     {
       "id": "2",
       "title": "Amazon Clone",
+      "subtitle": "Amazon clone with slight changes",
       "about": "This React JS app is a clone of Amazon 2.0 with some changes in the UI. I used tailwind css to design the app and as a result I didn't write many Css/Sass codes myself. Redux has been used to handle the states through the app and the products has been fetched from fakestore API.",
       "banner": "dataAssets/projects/Banners/amazon.png",
       "tech": ["ReactJS", "Redux", "Tailwind", "Sass"],
@@ -52,55 +49,21 @@
         "dataAssets/techPics/css.png",
         "dataAssets/techPics/json.png"
       ],
-      "screenshotLarge": [
-        "dataAssets/projects/amazon/amazon.png",
+      "images": [
         "dataAssets/projects/amazon/S1.png",
         "dataAssets/projects/amazon/S2.png",
-        "dataAssets/projects/amazon/S3.png"
+        "dataAssets/projects/amazon/S3.png",
+        "dataAssets/projects/amazon/S4.png",
+        "dataAssets/projects/amazon/S5.png",
+        "dataAssets/projects/amazon/S6.png"
       ],
-      "screenshotSmall": [
-        "dataAssets/projects/amazon/sm/S1.png",
-        "dataAssets/projects/amazon/sm/S2.png",
-        "dataAssets/projects/amazon/sm/S3.png"
-      ],
-      "links": ["https://amazon-clone-yasin-yunesi.vercel.app/", "https://github.com/YasinYunesi/Amazon-clone"]
-    },
-    {
-      "id": "3",
-      "title": "Classy cafe",
-      "about": "Classy cafe is just a cafe/restaurant website template. I started working on this project when i was done learning bootstrap and I wanted to test myself.",
-      "banner": "dataAssets/projects/Banners/classy_cafe.png",
-      "tech": ["HTML", "CSS", "Bootstrap"],
-      "techPic": [
-        "dataAssets/techPics/react.png",
-        "dataAssets/techPics/redux.png",
-        "dataAssets/techPics/tailwind.png",
-        "dataAssets/techPics/bootstrap.png",
-        "dataAssets/techPics/sass.png",
-        "dataAssets/techPics/firebase.png",
-        "dataAssets/techPics/html.png",
-        "dataAssets/techPics/css.png",
-        "dataAssets/techPics/json.png"
-      ],
-      "screenshotLarge": [
-        "dataAssets/projects/classy_cafe/classy_cafe.png",
-        "dataAssets/projects/classy_cafe/S1.png",
-        "dataAssets/projects/classy_cafe/S2.png",
-        "dataAssets/projects/classy_cafe/S3.png",
-        "dataAssets/projects/classy_cafe/S4.png"
-      ],
-      "screenshotSmall": [
-        "dataAssets/projects/classy_cafe/sm/S1.png",
-        "dataAssets/projects/classy_cafe/sm/S2.png",
-        "dataAssets/projects/classy_cafe/sm/S3.png",
-        "dataAssets/projects/classy_cafe/sm/S4.png",
-        "dataAssets/projects/classy_cafe/sm/S5.png"
-      ],
-      "links": ["https://classy-cafe.netlify.app/", "https://github.com/YasinYunesi/Classy-cafe"]
+      "link": "https://amazon-clone-yasin-yunesi.vercel.app",
+      "github": "https://github.com/YasinYunesi/Amazon-clone"
     },
     {
       "id": "4",
       "title": "Yasin Yunesi website",
+      "subtitle": "Online resumé",
       "about": "The very website you're watching. I wanted a fast website with good UI to describe myself, my skills and my projects. This website uses React js and react-bootstrap for the UI and Firebase database to store user's emails to me.",
       "banner": "dataAssets/projects/Banners/portfolio.png",
       "tech": ["ReactJS", "Bootstrap", "Sass", "Firebase DB", "Local-JSON"],
@@ -115,20 +78,44 @@
         "dataAssets/techPics/css.png",
         "dataAssets/techPics/json.png"
       ],
-      "screenshotLarge": [
-        "dataAssets/projects/portfolio/portfolio.png",
+      "images": [
         "dataAssets/projects/portfolio/S1.png",
         "dataAssets/projects/portfolio/S2.png",
         "dataAssets/projects/portfolio/S3.png",
-        "dataAssets/projects/portfolio/S4.png"
+        "dataAssets/projects/portfolio/S4.png",
+        "dataAssets/projects/portfolio/S5.png",
+        "dataAssets/projects/portfolio/S6.png"
       ],
-      "screenshotSmall": [
-        "dataAssets/projects/portfolio/sm/S1.png",
-        "dataAssets/projects/portfolio/sm/S2.png",
-        "dataAssets/projects/portfolio/sm/S3.png",
-        "dataAssets/projects/portfolio/sm/S4.png"
+      "links": "https://findyasinyunesi.vercel.app",
+      "github": "https://github.com/YasinYunesi/findyasinyunesi"
+    },
+    {
+      "id": "3",
+      "title": "Classy cafe",
+      "subtitle": "Café/restaurant template",
+      "about": "Classy cafe is just a cafe/restaurant website template. I started working on this project when i was done learning bootstrap and I wanted to test myself.",
+      "banner": "dataAssets/projects/Banners/classy_cafe.png",
+      "tech": ["HTML", "CSS", "Bootstrap"],
+      "techPic": [
+        "dataAssets/techPics/react.png",
+        "dataAssets/techPics/redux.png",
+        "dataAssets/techPics/tailwind.png",
+        "dataAssets/techPics/bootstrap.png",
+        "dataAssets/techPics/sass.png",
+        "dataAssets/techPics/firebase.png",
+        "dataAssets/techPics/html.png",
+        "dataAssets/techPics/css.png",
+        "dataAssets/techPics/json.png"
       ],
-      "links": ["https://findyasinyunesi.vercel.app/", "https://github.com/YasinYunesi/findyasinyunesi"]
+      "images": [
+        "dataAssets/projects/classy_cafe/S1.png",
+        "dataAssets/projects/classy_cafe/S2.png",
+        "dataAssets/projects/classy_cafe/S3.png",
+        "dataAssets/projects/classy_cafe/S4.png",
+        "dataAssets/projects/classy_cafe/S5.png"
+      ],
+      "links": "https://classy-cafe.netlify.app",
+      "github": "https://github.com/YasinYunesi/Classy-cafe"
     }
   ],
   "skills": [

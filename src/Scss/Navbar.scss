@@ -3,6 +3,7 @@
 .costum_navbar {
   background: $dark_blue;
   border-bottom: 3.8px solid $light_blue;
+  z-index: 10 !important;
 
   // toggle btn
   .navbar_toggler {

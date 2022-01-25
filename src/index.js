@@ -8,6 +8,8 @@ import "bootstrap/dist/js/bootstrap.bundle";
 // fonts and icons
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@mdi/font/css/materialdesignicons.min.css";
+// modal library
+import "react-responsive-modal/styles.css";
 
 ReactDOM.render(
   <React.StrictMode>
