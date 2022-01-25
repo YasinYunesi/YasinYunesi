@@ -18,7 +18,7 @@ const MainAbilities = () => {
   return (
     <div className='main_ab col m-auto d-flex flex-column justify-content-between'>
       {skills.map(({ title, percentage }) => {
-        return <MAItem text={title} percentage={percentage + "%"} />;
+        return <MAItem text={title} percentage={percentage + "%"} key={title} />;
       })}
     </div>
   );

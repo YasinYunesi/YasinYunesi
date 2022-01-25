@@ -18,7 +18,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           <div className='project_text'>
             <h4 className='fw-bold'>{title}</h4>
             {tech.map((t, i) => {
-              return i <= 2 && <span>{`${t}${i <= 1 ? "/" : ""}`}</span>;
+              return i <= 2 && <span key={t}>{`${t}${i <= 1 ? "/" : ""}`}</span>;
             })}
           </div>
 
@@ -46,7 +46,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           <div className='carousel-inner'>
             {images.map((img, i) => {
               return (
-                <div className={`carousel-item ${i === 0 ? "active" : ""}`}>
+                <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={img}>
                   <img className='col-12' src={img} alt='project banner' />
                 </div>
               );
@@ -88,7 +88,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           <div className='techs my-4 pt-1 pb-2 d-grid'>
             {techPic.map((pic) => {
               return (
-                <div className='col-10 p-2'>
+                <div className='col-10 p-2' key={pic}>
                   <img className='col-12' src={pic} alt='tech' />
                 </div>
               );

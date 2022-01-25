@@ -7,11 +7,20 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   // fetching the data from data.json
-  async function getData() {
-    const response = await fetch("data.json");
-    const data = await response.json();
-    setProjects(data.projects);
-  }
+  const getData = () => {
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        setProjects(data.projects);
+      });
+  };
   useEffect(() => {
     getData();
   }, []);
