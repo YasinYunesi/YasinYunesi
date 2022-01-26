@@ -6,7 +6,14 @@
   .projects_container {
     // TABS
     .projects_tabs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
       a {
+        background: transparent;
         border-radius: 0;
         border: none;
         font-weight: bold;
@@ -23,7 +30,13 @@
     // PROJECTS
     .projects {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
 
       .project {
         .project_overlay {
@@ -36,6 +49,9 @@
           .project_text {
             opacity: 0;
             transform: translateY(-120%);
+            @media screen and (max-width: 359px) {
+              font-size: 13px;
+            }
             span {
               color: $pink;
             }
@@ -47,7 +63,10 @@
             button {
               background: transparent;
               border: 2px solid $pink;
-              font-size: 20px;
+              font-size: 16px;
+              @media screen and (max-width: 359px) {
+                font-size: 13px;
+              }
               transition: $short_transition;
               &:hover {
                 background: $pink;
@@ -63,9 +82,21 @@
             opacity: 1;
             .project_text {
               animation: $move_down;
+              @media screen and (min-width: 992px) and (max-width: 1200px) {
+                animation: $move_down_sm;
+              }
+              @media screen and (max-width: 360px) {
+                animation: $move_down_xs;
+              }
             }
             .project_btn {
               animation: $move_up;
+              @media screen and (min-width: 992px) and (max-width: 1200px) {
+                animation: $move_up_sm;
+              }
+              @media screen and (max-width: 359px) {
+                animation: $move_up_xs;
+              }
             }
           }
         }

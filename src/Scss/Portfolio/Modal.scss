@@ -1,5 +1,8 @@
 .custom_modal {
   width: 700px;
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
   outline: none;
   border-radius: 2px;
 
@@ -47,7 +50,19 @@
     // techs
     .techs {
       display: grid;
-      grid-template-columns: repeat(15, minmax(0, 1fr));
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      @media screen and (max-width: 330px) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+      @media screen and (min-width: 430px) {
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+      }
+      @media screen and (min-width: 530px) {
+        grid-template-columns: repeat(13, minmax(0, 1fr));
+      }
+      @media screen and (min-width: 740px) {
+        grid-template-columns: repeat(15, minmax(0, 1fr));
+      }
       div {
         background: #e0e7f0;
         border-radius: 50px;

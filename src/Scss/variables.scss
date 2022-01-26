@@ -45,6 +45,58 @@
     opacity: 1;
   }
 }
+@keyframes move-down-sm {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(60%);
+    opacity: 1;
+  }
+}
+@keyframes move-up-sm {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+@keyframes move-down-xs {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(40%);
+    opacity: 1;
+  }
+}
+@keyframes move-up-xs {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-80%);
+    opacity: 1;
+  }
+}
 @keyframes shake {
   25% {
     transform: rotate(10deg);
@@ -98,5 +150,9 @@ $short_transition: all 0.2s linear;
 $transition: all 0.3s linear;
 $long_transition: all 1s linear;
 $move_down: move-down 0.4s ease-out forwards;
+$move_down_sm: move-down-sm 0.4s ease-out forwards;
+$move_down_xs: move-down-xs 0.4s ease-out forwards;
 $move_up: move-up 0.4s ease-out forwards;
+$move_up_sm: move-up-sm 0.4s ease-out forwards;
+$move_up_xs: move-up-xs 0.4s ease-out forwards;
 $shake: shake 0.5s linear forwards;

@@ -31,11 +31,11 @@ const Portfolio = () => {
       <Header text='projects' />
 
       {/* PROJECTS */}
-      <div className='projects_container container px-5'>
+      <div className='projects_container container px-4'>
         {/* Tabs */}
         <ScrollAnimation animateIn='fadeIn' animateOnce={true}>
           <div
-            className='projects_tabs list-group col-8 mx-auto mb-4 mt-5 text-uppercase text-center d-flex flex-row justify-content-around'
+            className='projects_tabs list-group col-12 col-lg-8 mx-auto mb-4 mt-5 text-uppercase text-center'
             role='tablist'
             id='list-tab'
           >

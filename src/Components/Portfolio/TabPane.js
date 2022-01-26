@@ -1,6 +1,8 @@
 import { useState } from "react";
 // Modal library
 import { Modal } from "react-responsive-modal";
+// placeholder library
+import { CustomPlaceholder } from "react-placeholder-image";
 
 const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, github }) => {
   const [open, setOpen] = useState(false);
@@ -9,7 +11,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
   return (
     <>
       {/* Project banner */}
-      <div className='project position-relative p-1'>
+      <div className='project position-relative p-1 mb-3 mb-lg-0'>
         {/* THE MAIN BANNER */}
         <img className='col-12' src={banner} alt='project banner' />
 
@@ -23,7 +25,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           </div>
 
           <div className='project_btn'>
-            <button className='text-uppercase px-5 py-2 fs-6' onClick={() => setOpen(true)}>
+            <button className='text-uppercase px-4 py-1 px-xl-5 py-xl-2' onClick={() => setOpen(true)}>
               learn more
             </button>
           </div>
@@ -32,11 +34,10 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
       {/* Project modal */}
       <Modal
         classNames={{
-          modal: "custom_modal p-0 bg-transparent",
+          modal: "custom_modal p-0 m-0 bg-transparent",
         }}
         open={open}
         onClose={() => setOpen(false)}
-        blockScroll={false}
         showCloseIcon={false}
         center
       >
@@ -47,7 +48,11 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
             {images.map((img, i) => {
               return (
                 <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={img}>
-                  <img className='col-12' src={img} alt='project banner' />
+                  {img ? (
+                    <img className='col-12' src={img} alt='project banner' />
+                  ) : (
+                    <CustomPlaceholder width={700} height={450} text='Project screenshot' />
+                  )}
                 </div>
               );
             })}
@@ -59,7 +64,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
             data-bs-slide='prev'
             type='button'
           >
-            <i class='fas fa-chevron-left fs-5' aria-hidden='true'></i>
+            <i className='fas fa-chevron-left fs-5' aria-hidden='true'></i>
           </button>
           <button
             className='carousel_btn position-absolute bottom-0 end-0 px-4 py-3'
@@ -67,7 +72,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
             data-bs-slide='next'
             type='button'
           >
-            <i class='fas fa-chevron-right fs-5' aria-hidden='true'></i>
+            <i className='fas fa-chevron-right fs-5' aria-hidden='true'></i>
           </button>
         </div>
 
@@ -79,7 +84,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
               <span className='text-uppercase'>{subtitle}.</span>
             </div>
             <a href={github} title='See code on Github' target='_blank' rel='noreferrer'>
-              <i class='fab fa-github fs-3'></i>
+              <i className='fab fa-github fs-3'></i>
             </a>
           </div>
           {/* description */}
@@ -88,7 +93,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           <div className='techs my-4 pt-1 pb-2 d-grid'>
             {techPic.map((pic) => {
               return (
-                <div className='col-10 p-2' key={pic}>
+                <div className='col-12 col-md-10 p-2' key={pic}>
                   <img className='col-12' src={pic} alt='tech' />
                 </div>
               );
@@ -97,10 +102,10 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
           {/* buttons */}
           <div className='modal_btns d-flex justify-content-between'>
             <a href={link} className='site_btn text-uppercase fw-bold px-4 py-2' title={link} target='_blank' rel='noreferrer'>
-              <i class='fas fa-external-link-alt me-2' /> view site
+              <i className='fas fa-external-link-alt me-2' /> view site
             </a>
             <button className='close_btn d-flex bg-transparent' onClick={() => setOpen(false)} title='Close'>
-              <i class='fas fa-times fs-5 my-auto' />
+              <i className='fas fa-times fs-5 my-auto' />
             </button>
           </div>
         </div>
