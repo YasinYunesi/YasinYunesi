@@ -31,4 +31,19 @@
       }
     }
   }
+
+  // download CV
+  .download_cv {
+    border: none;
+    background: $pink;
+    filter: brightness(90%);
+    transition: $short_transition;
+    &:hover {
+      filter: brightness(100%);
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
 }
