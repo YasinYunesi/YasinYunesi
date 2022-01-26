@@ -8,10 +8,14 @@
       font-family: $font_bold;
       color: $white;
       background: $light_blue;
+      width: 110px;
       @media screen and (max-width: 400px) {
         width: 80px;
       }
-      width: 110px;
+      font-size: 16px;
+      @media screen and (max-width: 629px) {
+        font-size: 13px;
+      }
     }
   }
   span {

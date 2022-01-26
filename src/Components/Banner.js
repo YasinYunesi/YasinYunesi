@@ -24,8 +24,8 @@ const Banner = () => {
             Hello, I'm <span className='name'>Yasin Yunesi</span>.
           </h1>
           <br />
-          <h1>
-            I'm a React js <Typical steps={["website", 4000, "web app", 3000]} loop={Infinity} wrapper='span' />
+          <h1 className='react_line'>
+            I'm a React js <br /> <Typical steps={["website", 4000, "web app", 3000]} loop={Infinity} wrapper='span' />
             developer.
           </h1>
         </div>
