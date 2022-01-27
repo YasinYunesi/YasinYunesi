@@ -38,10 +38,18 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
-      .project {
+      .project.active_banner {
         height: 324px !important;
+        background: transparent;
         @media screen and (max-width: 1400px) {
           height: 100% !important;
+        }
+      }
+      .project {
+        height: 324px !important;
+        background: rgba(0, 0, 0, 0.4);
+        @media screen and (max-width: 1400px) {
+          height: 300px !important;
         }
 
         .project_banner {

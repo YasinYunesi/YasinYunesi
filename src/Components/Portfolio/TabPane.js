@@ -4,15 +4,17 @@ import { Modal } from "react-responsive-modal";
 
 const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, github }) => {
   const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [bannerLoaded, setBannerLoaded] = useState(false);
 
   // JSX ///////////////////////////////
   return (
     <>
       {/* Project banner */}
-      <div className='project position-relative p-1 mb-3 mb-lg-0'>
+      <div className={`project position-relative p-1 mb-3 mb-lg-0 ${bannerLoaded ? "active_banner" : ""}`}>
         {/* THE MAIN BANNER */}
         <div className='project_banner'>
-          <img className='col-12 h-100' src={banner} alt='project banner' />
+          <img className='col-12 h-100' src={banner} alt='project banner' onLoad={() => setBannerLoaded(true)} />
         </div>
 
         {/* THE OVERLAY */}
@@ -44,11 +46,11 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
         {/* Images Carousel */}
         <div className='carousel slide position-relative' id='projectCarousel' data-bs-ride='carousel' data-bs-interval='false'>
           {/* images */}
-          <div className='carousel-inner'>
+          <div className={`carousel-inner ${loaded ? "active_img" : ""}`}>
             {images.map((img, i) => {
               return (
                 <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={img}>
-                  <img className='col-12' src={img} alt='project screenshot' />
+                  <img className='col-12' src={img} alt='project screenshot' onLoad={() => setLoaded(true)} />
                 </div>
               );
             })}
