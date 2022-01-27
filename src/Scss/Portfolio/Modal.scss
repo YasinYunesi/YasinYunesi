@@ -8,6 +8,17 @@
 
   // CAROUSEL
   .carousel {
+    // placeholdre
+    .carousel_placeholder {
+      width: 700px;
+      height: 450px;
+      background: #9c9c9c;
+      color: #6161614d;
+      @media screen and (max-width: 1200px) {
+        width: 90%;
+      }
+    }
+
     // btns
     .carousel_btn {
       border: 0;
