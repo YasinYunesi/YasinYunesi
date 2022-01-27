@@ -4,8 +4,6 @@ import { Modal } from "react-responsive-modal";
 
 const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, github }) => {
   const [open, setOpen] = useState(false);
-  const [bannerLoaded, setBannerLoaded] = useState(false);
-  const [loaded, setLoaded] = useState(false);
 
   // JSX ///////////////////////////////
   return (
@@ -13,12 +11,9 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
       {/* Project banner */}
       <div className='project position-relative p-1 mb-3 mb-lg-0'>
         {/* THE MAIN BANNER */}
-        {!bannerLoaded ? (
-          <div className='banner_placeholder d-flex align-items-center justify-content-center'>
-            <h4 className='fw-bold'>Project banner</h4>
-          </div>
-        ) : null}
-        <img className='col-12' src={banner} alt='project banner' onLoad={() => setBannerLoaded(true)} />
+        <div className='project_banner'>
+          <img className='col-12 h-100' src={banner} alt='project banner' />
+        </div>
 
         {/* THE OVERLAY */}
         <div className='project_overlay position-absolute top-0 bottom-0 start-0 end-0 text-center d-flex flex-column justify-content-between'>
@@ -53,12 +48,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
             {images.map((img, i) => {
               return (
                 <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={img}>
-                  {!loaded ? (
-                    <div className='carousel_placeholder d-flex align-items-center justify-content-center'>
-                      <h1 className='fw-bold'>Project screenshot</h1>
-                    </div>
-                  ) : null}
-                  <img className='col-12' src={img} alt='project screenshot' onLoad={() => setLoaded(true)} />
+                  <img className='col-12' src={img} alt='project screenshot' />
                 </div>
               );
             })}

@@ -8,23 +8,20 @@
 
   // CAROUSEL
   .carousel {
-    // placeholdre
-    .carousel_placeholder {
-      width: 700px;
-      height: 450px;
-      background: #9c9c9c;
-      color: #6161614d;
-      @media screen and (max-width: 450px) {
-        width: 100%;
-        height: 217px;
+    // placeholder
+    .carousel-inner {
+      height: 450px !important;
+      @media screen and (max-width: 1200px) {
+        height: 100% !important;
       }
-      @media screen and (min-width: 451px) and (max-width: 700px) {
-        width: 100%;
-        height: 300px;
-      }
-      @media screen and (min-width: 701px) and (max-width: 1200px) {
-        width: 100%;
-        height: 415px;
+
+      .carousel-item {
+        width: 700px !important;
+        max-width: 700px !important;
+        @media screen and (max-width: 1200px) {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
       }
     }
 

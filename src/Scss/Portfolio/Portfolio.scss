@@ -39,14 +39,17 @@
       }
 
       .project {
-        // images placeholdre
-        .banner_placeholder {
-          width: 416px;
-          height: 315.61px;
-          background: #9c9c9c;
-          color: #6161614d;
-          @media screen and (max-width: 1200px) {
-            width: 100%;
+        height: 324px !important;
+        @media screen and (max-width: 1400px) {
+          height: 100% !important;
+        }
+
+        .project_banner {
+          width: 416px !important;
+          max-width: 416px !important;
+          @media screen and (max-width: 1400px) {
+            width: 100% !important;
+            max-width: 100% !important;
           }
         }
 
