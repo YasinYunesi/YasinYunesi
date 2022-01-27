@@ -1,8 +1,8 @@
 import { useState } from "react";
 // Modal library
 import { Modal } from "react-responsive-modal";
-// placeholder library
-import { CustomPlaceholder } from "react-placeholder-image";
+// lazy loading library
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, github }) => {
   const [open, setOpen] = useState(false);
@@ -13,7 +13,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
       {/* Project banner */}
       <div className='project position-relative p-1 mb-3 mb-lg-0'>
         {/* THE MAIN BANNER */}
-        <img className='col-12' src={banner} alt='project banner' />
+        <LazyLoadImage className='col-12' alt='Project banner' src={banner} effect='black-and-white' />
 
         {/* THE OVERLAY */}
         <div className='project_overlay position-absolute top-0 bottom-0 start-0 end-0 text-center d-flex flex-column justify-content-between'>
@@ -48,11 +48,7 @@ const TabPane = ({ banner, tech, title, subtitle, techPic, images, about, link, 
             {images.map((img, i) => {
               return (
                 <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={img}>
-                  {img ? (
-                    <img className='col-12' src={img} alt='project banner' />
-                  ) : (
-                    <CustomPlaceholder width={700} height={450} text='Project screenshot' />
-                  )}
+                  <LazyLoadImage className='col-12' alt='Project banner' src={img} effect='black-and-white' />
                 </div>
               );
             })}
