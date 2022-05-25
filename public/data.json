@@ -77,21 +77,24 @@
     },
     {
       "id": "3",
-      "title": "Classy cafe",
-      "subtitle": "Café/restaurant template",
-      "about": "Classy cafe is just a cafe/restaurant website template. I started working on this project when i was done learning bootstrap and I wanted to test myself.",
-      "banner": "dataAssets/projects/Banners/classy_cafe.jpg",
-      "tech": ["HTML", "CSS", "Bootstrap"],
-      "techPic": ["dataAssets/techPics/html.png", "dataAssets/techPics/css.png", "dataAssets/techPics/bootstrap.png"],
+      "title": "Bookary",
+      "subtitle": "Book store template",
+      "about": "Bookary is an online book store template which uses the Google books API, React-hook-form and context API to get books info, validate user and store user's info.",
+      "banner": "dataAssets/projects/Banners/bookary.jpg",
+      "tech": ["ReactJS", "Tailwind"],
+      "techPic": ["dataAssets/techPics/react.png", "dataAssets/techPics/tailwind.png"],
       "images": [
-        "dataAssets/projects/classy_cafe/S1.jpg",
-        "dataAssets/projects/classy_cafe/S2.jpg",
-        "dataAssets/projects/classy_cafe/S3.jpg",
-        "dataAssets/projects/classy_cafe/S4.jpg",
-        "dataAssets/projects/classy_cafe/S5.jpg"
+        "dataAssets/projects/bookary/S1.jpg",
+        "dataAssets/projects/bookary/S2.jpg",
+        "dataAssets/projects/bookary/S3.jpg",
+        "dataAssets/projects/bookary/S4.jpg",
+        "dataAssets/projects/bookary/S5.jpg",
+        "dataAssets/projects/bookary/S6.jpg",
+        "dataAssets/projects/bookary/S7.jpg",
+        "dataAssets/projects/bookary/S8.jpg"
       ],
-      "link": "https://classy-cafe.netlify.app",
-      "github": "https://github.com/YasinYunesi/Classy-cafe"
+      "link": "https://bookary.vercel.app",
+      "github": "https://github.com/YasinYunesi/Bookary"
     }
   ],
   "skills": [
